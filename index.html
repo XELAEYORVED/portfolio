@@ -3,8 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alexandre Devroye</title>
-<meta name="description" content="Alexandre Devroye (Alex Way) — Étudiant bachelier Réseaux & Télécoms, développeur full-stack, cybersécurité. Karatéka Kyokushin, instructeur Taekwondo 1er dan. Fondateur de CyberDojo, sensibilisation gratuite contre les arnaques en ligne. Projets IA, 3D, réseau et sécurité.">
+<title>Alexandre Devroye — Développeur Full-stack &amp; IA | Portfolio</title>
+<meta name="description" content="Portfolio d'Alexandre Devroye (Alex Way), étudiant en bachelier Réseaux &amp; Télécommunications à la HEH (La Louvière) et développeur full-stack passionné par l'intelligence artificielle. Projets web, IA, réseau et hackathons (ETH Oxford 2025).">
+<meta name="author" content="Alexandre Devroye">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://alexandre-devroye.vercel.app/">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Open Graph / partage LinkedIn, WhatsApp, Discord… -->
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:site_name" content="Alexandre Devroye">
+<meta property="og:title" content="Alexandre Devroye — Développeur Full-stack &amp; IA">
+<meta property="og:description" content="Étudiant en Réseaux &amp; Télécommunications à la HEH et développeur full-stack passionné par l'intelligence artificielle.">
+<meta property="og:url" content="https://alexandre-devroye.vercel.app/">
+<meta property="og:image" content="https://alexandre-devroye.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alexandre Devroye — Développeur full-stack passionné par l'IA">
+<meta property="profile:first_name" content="Alexandre">
+<meta property="profile:last_name" content="Devroye">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alexandre Devroye — Développeur Full-stack &amp; IA">
+<meta name="twitter:description" content="Étudiant en Réseaux &amp; Télécommunications à la HEH et développeur full-stack passionné par l'intelligence artificielle.">
+<meta name="twitter:image" content="https://alexandre-devroye.vercel.app/og-image.jpg">
+
+<!-- Données structurées : aide Google à reconnaître la personne -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://alexandre-devroye.vercel.app/",
+  "inLanguage": "fr-BE",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Alexandre Devroye",
+    "alternateName": "Alex Way",
+    "url": "https://alexandre-devroye.vercel.app/",
+    "image": "https://alexandre-devroye.vercel.app/about-alex.jpg",
+    "jobTitle": "Développeur full-stack",
+    "email": "mailto:alexandre.devroye@std.heh.be",
+    "address": {"@type": "PostalAddress", "addressLocality": "La Louvière", "addressCountry": "BE"},
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "Haute École en Hainaut (HEH)", "url": "https://www.heh.be"},
+    "knowsAbout": ["Développement full-stack", "Intelligence artificielle", "Réseaux et télécommunications", "Cisco CCNA", "TypeScript", "Python", "React", "Next.js", "Blockchain", "OSINT"],
+    "sameAs": [
+      "https://github.com/XELAEYORVED",
+      "https://www.linkedin.com/in/alexandre-devroye-5b145624b/",
+      "https://www.youtube.com/@alexdevway"
+    ]
+  }
+}
+</script>
 <style>
 /* Layout: immersive 3D + portrait hero, then editorial sections; interactive project index. Committed ink/bone/ochre tri-colour. */
 :root{
@@ -38,7 +89,7 @@
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--ff-body);line-height:1.55;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.03;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 h1,h2,h3{font-family:var(--ff-disp);font-weight:800;line-height:.92;margin:0;text-wrap:balance}
 p{margin:0}
@@ -69,7 +120,7 @@ sup{font-size:.6em}
 .tl.in .tli::before{border-color:var(--red)}
 .tli.now::before{background:var(--red);border-color:var(--red)}
 .tlyear{font-family:var(--ff-mono);font-size:.72rem;letter-spacing:.08em;color:var(--red);text-transform:uppercase}
-.tlt{font-family:var(--ff-disp);font-weight:800;font-size:clamp(1.3rem,3.5vw,1.9rem);text-transform:uppercase;letter-spacing:-.01em;margin-top:5px}
+.tlt{font-family:var(--ff-disp);font-weight:800;font-size:clamp(1.1rem,3.5vw,1.9rem);hyphens:auto;overflow-wrap:break-word;text-transform:uppercase;letter-spacing:-.01em;margin-top:5px}
 .tlsub{font-family:var(--ff-mono);font-size:.74rem;color:var(--muted);margin-top:6px}
 .tld{color:var(--muted);margin-top:10px;max-width:60ch}
 .tlchips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
@@ -163,14 +214,15 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 #bg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
 .herofade{position:absolute;left:0;right:0;bottom:0;height:34%;z-index:1;pointer-events:none;
   background:linear-gradient(to bottom,transparent,var(--bg))}
-.heroc{position:relative;z-index:2;width:100%}
-.hmain{max-width:620px}
+.heroc{position:relative;z-index:2;width:100%;container-type:inline-size}
+.hmain{max-width:none}
+.hmain>:not(.hname){max-width:620px}
 .hmain .hname,.hmain .role{text-shadow:0 2px 30px color-mix(in srgb,var(--bg) 70%,transparent)}
 .kaizen{margin-top:28px;font-size:.72rem;color:var(--muted);letter-spacing:.05em}
 .kaizen b{color:var(--red)}
 .htag{display:flex;gap:10px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
 .htag .yr{font-family:var(--ff-mono);font-size:.7rem;color:var(--muted)}
-.hname{font-size:clamp(2.9rem,12vw,8.5rem);letter-spacing:-.03em;line-height:.86;text-transform:uppercase}
+.hname{font-size:min(8.5rem,9.4cqi);letter-spacing:-.03em;line-height:.86;text-transform:uppercase}
 .hname .ln2{display:block;color:var(--red)}
 .role{font-family:var(--ff-disp);font-weight:700;font-size:clamp(1.1rem,3.6vw,1.9rem);margin-top:.5em;letter-spacing:-.01em}
 .role .amp{color:var(--red);font-style:italic}
@@ -210,16 +262,16 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 
 /* section scaffold */
 .sec{padding-block:clamp(52px,8vw,88px);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
-/* animated section backdrop */
-.sec::before,.ct2::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+/* animated section backdrop — grid drifts via transform (GPU), static fade on top */
+.sec::before,.ct2::before{content:"";position:absolute;top:-92px;left:-92px;right:0;bottom:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(color-mix(in srgb,var(--fg) 7%,transparent) 1px,transparent 1px),
                    linear-gradient(90deg,color-mix(in srgb,var(--fg) 7%,transparent) 1px,transparent 1px);
-  background-size:46px 46px;
-  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 0%,transparent 72%);
-  mask-image:radial-gradient(120% 90% at 50% 0%,#000 0%,transparent 72%);
+  background-size:46px 46px;will-change:transform;
   animation:gridDrift 24s linear infinite}
+.sec::after,.ct2::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 0%,transparent 0%,var(--bg) 72%)}
 .sec:nth-of-type(even)::before,.ct2::before{animation-direction:reverse;animation-duration:30s}
-@keyframes gridDrift{from{background-position:0 0,0 0}to{background-position:46px 92px,92px 46px}}
+@keyframes gridDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(92px,92px,0)}}
 .sec>.wrap{position:relative;z-index:1}
 @media (prefers-reduced-motion:reduce){.sec::before,.ct2::before{animation:none}}
 .shead{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(30px,5vw,46px);flex-wrap:wrap}
@@ -231,6 +283,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 @media(max-width:760px){.abt{grid-template-columns:1fr}}
 .aphoto{position:relative;border:1px solid var(--line);overflow:hidden;background:#101010;
   aspect-ratio:4/5;max-height:560px;width:100%;max-width:360px;margin-inline:auto;box-shadow:0 30px 70px -40px rgba(0,0,0,.6)}
+.aphoto picture,.kphoto picture{display:contents}
 .aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(1.08);transform-origin:50% 20%;filter:grayscale(1) contrast(1.03);display:block}
 .aphoto .cap2{position:absolute;left:0;bottom:0;font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.08em;
   color:#fff;background:color-mix(in srgb,var(--red) 88%,#000);padding:5px 9px}
@@ -417,10 +470,16 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 
 /* contact */
 .ct2{padding-block:clamp(60px,10vw,110px);position:relative;overflow:hidden}
-.ct2>.wrap{position:relative;z-index:1}
-.ct2 h2{font-size:clamp(2.6rem,11vw,7rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.9}
+.ct2>.wrap{position:relative;z-index:1;container-type:inline-size}
+.ct2 h2{font-size:min(7rem,8.6cqi);text-transform:uppercase;letter-spacing:-.03em;line-height:.9}
 .ct2 .em{font-family:var(--ff-mono);font-size:clamp(.9rem,3vw,1.15rem);color:var(--red);margin-top:24px;word-break:break-all}
 .ct2 .soc{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+/* "bientôt disponible" toast */
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:9998;transform:translate(-50%,16px);opacity:0;pointer-events:none;
+  font-family:var(--ff-mono);font-size:.78rem;background:var(--fg);color:var(--bg);padding:12px 18px;max-width:calc(100vw - 32px);text-align:center;
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.6);transition:opacity .25s ease,transform .25s ease}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.toast{transition:opacity .2s}}
 footer{padding-block:24px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--ff-mono);font-size:.72rem;color:var(--muted)}
 </style>
@@ -461,10 +520,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       </div>
       <h1 class="hname" data-px="18">Alexandre<span class="ln2">Devroye</span></h1>
       <p class="role" data-px="12">Développeur <span class="amp">Junior</span> Full-stack</p>
-      <p class="hlead" data-px="8">Développeur full-stack et <b>passionné de cybersécurité</b>. Réseau, IA et 3D.</p>
+      <p class="hlead" data-px="8">Étudiant en <b>Réseaux &amp; Télécommunications</b> à la HEH et développeur full-stack, passionné par l'<b>intelligence artificielle</b>.</p>
       <div class="herocta" data-px="4">
         <a class="btn red" href="#index">Explorer les projets →</a>
-        <a class="btn" href="#cv">CV / PDF</a>
+        <a class="btn" href="#" data-soon>CV / PDF</a>
         <a class="btn" href="https://www.youtube.com/@alexdevway" target="_blank" rel="noopener">YouTube ↗</a>
       </div>
     </div>
@@ -477,18 +536,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div class="shead" data-reveal><span class="no">[01]</span><h2>À propos</h2></div>
     <div class="abt" data-reveal>
       <div class="aphoto">
-        <img src="about-alex.jpg" alt="Alexandre Devroye" width="820" height="1520">
+        <picture><source srcset="about-alex.webp" type="image/webp"><img src="about-alex.jpg" loading="lazy" decoding="async" alt="Alexandre Devroye" width="820" height="1520"></picture>
         <span class="cap2">Alexandre Devroye</span>
       </div>
       <div class="atxt">
         <p>Étudiant en <b>bachelier Réseaux &amp; Télécommunications à la HEH</b>, animé par une double exigence : la rigueur de l'infrastructure réseau et la créativité du développement logiciel.</p>
-        <p>Mon cursus me prépare aux <b>certifications Cisco</b> — CCNA 1 validé, CCNA 2 (routing &amp; switching) et télécoms avancés en cours. En parallèle, j'apprends la <b>cybersécurité en autodidacte</b> : red team, OSINT et sécurité offensive, par la lecture et des environnements de test isolés et légaux.</p>
-        <p>Côté produit, je livre complet : full-stack, IA générative, 3D temps réel — et j'avance sur la <b>conteneurisation</b> (Docker, Kubernetes).</p>
+        <p>Côté réseau, j'ai <b>validé le CCNA 1 de Cisco</b> et je prépare le <b>CCNA 2</b> (routage et commutation). Je m'intéresse aussi à la cybersécurité, surtout à l'<b>OSINT</b>, que j'explore à travers quelques projets.</p>
+        <p>J'aime me surpasser là où on m'attend le moins : en 2025, j'ai participé à <b>ETH Oxford</b>, un hackathon blockchain à l'<b>Université d'Oxford</b> — un domaine qu'on voit très peu dans mon cursus — puis au hackathon <b>Citizens of Wallonia</b> en 2026. Et ce n'est que le début : je compte en enchaîner d'autres.</p>
         <div class="side">
           <div class="row"><span>Formation</span><b>HEH — Réseaux &amp; Télécoms</b></div>
           <div class="row"><span>Base</span><b>La Louvière, BE</b></div>
           <div class="row"><span>Langages</span><b>TS · Python · JS</b></div>
-          <div class="row"><span>Karaté</span><b>Mitsumine Team</b></div>
+          <div class="row"><span>Karaté</span><b>Compétiteur</b></div>
           <div class="row"><span>Taekwondo</span><b>1<sup>er</sup> dan · instr.</b></div>
           <div class="row"><span>Chaîne</span><b>@alexdevway</b></div>
         </div>
@@ -568,7 +627,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div>
             <p class="pdesc">Plateforme qui analyse des CV et les compare à des offres grâce à l'IA Gemini : extraction structurée, scoring de correspondance, chatbot d'assistance au recrutement. Mon projet le plus abouti, de bout en bout.</p>
             <div class="comp"><div class="ct"><span>Composition</span><span>4 modules</span></div><div class="cbar" role="img" aria-label="TypeScript 44%, Python 24%, API Gemini 18%, CSS 14%"><span class="cseg" style="background:var(--d1)" data-w="44"></span><span class="cseg" style="background:var(--d2)" data-w="24"></span><span class="cseg" style="background:var(--d3)" data-w="18"></span><span class="cseg" style="background:var(--d4)" data-w="14"></span></div><div class="clegend"><div class="cleg"><span class="sw" style="background:var(--d1)"></span><span class="nm">TypeScript</span><span class="pc">44%</span></div><div class="cleg"><span class="sw" style="background:var(--d2)"></span><span class="nm">Python</span><span class="pc">24%</span></div><div class="cleg"><span class="sw" style="background:var(--d3)"></span><span class="nm">API Gemini</span><span class="pc">18%</span></div><div class="cleg"><span class="sw" style="background:var(--d4)"></span><span class="nm">CSS</span><span class="pc">14%</span></div></div></div>
-            <div class="plinks"><a href="#">▶ Démo live</a><a href="#">⟨⟩ Code</a><a href="#">↳ Étude de cas</a></div>
+            <div class="plinks"><a href="#" data-soon>▶ Démo live</a><a href="#" data-soon>⟨⟩ Code</a><a href="#" data-soon>↳ Étude de cas</a></div>
           </div>
           <div class="pvw"><div class="pvwbar"><i></i><i></i><i></i><span class="u">recruitmatch.app</span></div>
             <div class="pvwbody">
@@ -594,7 +653,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div>
             <p class="pdesc">Recommandation de parfums par chatbot IA, mise en scène dans une expérience 3D immersive : matières et animations rendues en temps réel avec React Three Fiber.</p>
             <div class="comp"><div class="ct"><span>Composition</span><span>4 modules</span></div><div class="cbar" role="img" aria-label="TypeScript 38%, Three.js 30%, Next.js 20%, Gemini 12%"><span class="cseg" style="background:var(--d1)" data-w="38"></span><span class="cseg" style="background:var(--d3)" data-w="30"></span><span class="cseg" style="background:var(--d4)" data-w="20"></span><span class="cseg" style="background:var(--d2)" data-w="12"></span></div><div class="clegend"><div class="cleg"><span class="sw" style="background:var(--d1)"></span><span class="nm">TypeScript</span><span class="pc">38%</span></div><div class="cleg"><span class="sw" style="background:var(--d3)"></span><span class="nm">Three.js</span><span class="pc">30%</span></div><div class="cleg"><span class="sw" style="background:var(--d4)"></span><span class="nm">Next.js</span><span class="pc">20%</span></div><div class="cleg"><span class="sw" style="background:var(--d2)"></span><span class="nm">Gemini</span><span class="pc">12%</span></div></div></div>
-            <div class="plinks"><a href="#">▶ Démo</a><a href="#">⟨⟩ Code</a></div>
+            <div class="plinks"><a href="#" data-soon>▶ Démo</a><a href="#" data-soon>⟨⟩ Code</a></div>
           </div>
           <div class="pvw"><div class="pvwbar"><i></i><i></i><i></i><span class="u">fragrance-lab</span></div>
             <div class="pvwbody"><div class="bl" style="width:50%"></div><div class="bl" style="width:70%"></div><div class="bl" style="width:40%"></div><p class="pvwtag">● 3D temps réel</p></div>
@@ -611,7 +670,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div>
             <p class="pdesc">Outil CLI de reconnaissance passive : agrège l'empreinte publique d'un domaine (WHOIS, DNS, Certificate Transparency, Wayback) en un rapport propre. Architecture modulaire et asynchrone, cadre éthique strict — labo & cibles autorisées uniquement.</p>
             <div class="comp"><div class="ct"><span>Composition</span><span>3 modules</span></div><div class="cbar" role="img" aria-label="Python 82%, Shell 10%, Docker 8%"><span class="cseg" style="background:var(--d3)" data-w="82"></span><span class="cseg" style="background:var(--d2)" data-w="10"></span><span class="cseg" style="background:var(--d1)" data-w="8"></span></div><div class="clegend"><div class="cleg"><span class="sw" style="background:var(--d3)"></span><span class="nm">Python</span><span class="pc">82%</span></div><div class="cleg"><span class="sw" style="background:var(--d2)"></span><span class="nm">Shell</span><span class="pc">10%</span></div><div class="cleg"><span class="sw" style="background:var(--d1)"></span><span class="nm">Docker</span><span class="pc">8%</span></div></div></div>
-            <div class="plinks"><a href="#">⟨⟩ Code</a><a href="#">↳ Démo asciinema</a></div>
+            <div class="plinks"><a href="#" data-soon>⟨⟩ Code</a><a href="#" data-soon>↳ Démo asciinema</a></div>
           </div>
           <div class="pvw"><div class="pvwbar"><i></i><i></i><i></i><span class="u">reconkit — zsh</span></div>
             <div class="pvwbody"><span style="color:var(--fg)">$</span> reconkit scan example.org<br><span style="color:var(--muted)">[dns]</span> resolving records…<br><span style="color:var(--muted)">[crt]</span> 12 sous-domaines trouvés<br><span style="color:var(--muted)">[whois]</span> registrar · expiry · ns<br><span style="color:var(--muted)">→ rapport : report.html</span><p class="pvwtag">● sortie terminal</p></div>
@@ -628,7 +687,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div>
             <p class="pdesc">App mobile de suivi d'entraînement pour karatékas : syllabus, coach IA, examinateur pour les passages de grade, journal avec résumé IA, grille d'activité par saison. Direction Apple Fitness sombre, maquette de 12 écrans.</p>
             <div class="comp"><div class="ct"><span>Composition</span><span>4 modules</span></div><div class="cbar" role="img" aria-label="Design UI/UX 40%, React Native 32%, TypeScript 20%, IA générative 8%"><span class="cseg" style="background:var(--d4)" data-w="40"></span><span class="cseg" style="background:var(--d1)" data-w="32"></span><span class="cseg" style="background:var(--d3)" data-w="20"></span><span class="cseg" style="background:var(--d2)" data-w="8"></span></div><div class="clegend"><div class="cleg"><span class="sw" style="background:var(--d4)"></span><span class="nm">Design UI/UX</span><span class="pc">40%</span></div><div class="cleg"><span class="sw" style="background:var(--d1)"></span><span class="nm">React Native</span><span class="pc">32%</span></div><div class="cleg"><span class="sw" style="background:var(--d3)"></span><span class="nm">TypeScript</span><span class="pc">20%</span></div><div class="cleg"><span class="sw" style="background:var(--d2)"></span><span class="nm">IA générative</span><span class="pc">8%</span></div></div></div>
-            <div class="plinks"><a href="#">▶ Prototype</a><a href="#">↳ Design</a></div>
+            <div class="plinks"><a href="#" data-soon>▶ Prototype</a><a href="#" data-soon>↳ Design</a></div>
           </div>
           <div class="pvw"><div class="pvwbar"><i></i><i></i><i></i><span class="u">osu · ios</span></div>
             <div class="pvwbody"><div style="display:grid;place-items:center;height:100%"><div style="width:30%;height:70%;border:2px solid var(--line);border-radius:10px;display:grid;place-items:start center;padding-top:14px"><div style="width:34px;height:34px;border-radius:50%;border:5px solid var(--fg);border-right-color:var(--line);rotate:-40deg"></div></div></div><p class="pvwtag" style="position:absolute;bottom:14px">● maquette interactive</p></div>
@@ -645,7 +704,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div>
             <p class="pdesc">Application de gestion pour club d'arts martiaux : site public, présences par QR code, carte membre, solde de cours et espace instructeur avec tableau de bord. Pensée pour le club Mitsumine Team La Louvière.</p>
             <div class="comp"><div class="ct"><span>Composition</span><span>4 modules</span></div><div class="cbar" role="img" aria-label="TypeScript 40%, Next.js 28%, React 20%, CSS 12%"><span class="cseg" style="background:var(--d1)" data-w="40"></span><span class="cseg" style="background:var(--d4)" data-w="28"></span><span class="cseg" style="background:var(--d3)" data-w="20"></span><span class="cseg" style="background:var(--d2)" data-w="12"></span></div><div class="clegend"><div class="cleg"><span class="sw" style="background:var(--d1)"></span><span class="nm">TypeScript</span><span class="pc">40%</span></div><div class="cleg"><span class="sw" style="background:var(--d4)"></span><span class="nm">Next.js</span><span class="pc">28%</span></div><div class="cleg"><span class="sw" style="background:var(--d3)"></span><span class="nm">React</span><span class="pc">20%</span></div><div class="cleg"><span class="sw" style="background:var(--d2)"></span><span class="nm">CSS</span><span class="pc">12%</span></div></div></div>
-            <div class="plinks"><a href="#">⟨⟩ Code</a><a href="#">↳ Concept</a></div>
+            <div class="plinks"><a href="#" data-soon>⟨⟩ Code</a><a href="#" data-soon>↳ Concept</a></div>
           </div>
           <div class="pvw"><div class="pvwbar"><i></i><i></i><i></i><span class="u">mitsupass · admin</span></div>
             <div class="pvwbody"><div class="bl" style="width:44%"></div><div class="bl" style="width:66%"></div><div class="bl" style="width:30%;background:color-mix(in srgb,var(--fg) 30%,var(--line))"></div><div class="bl" style="width:55%"></div><p class="pvwtag">● QR &amp; présences</p></div>
@@ -660,7 +719,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
             <p class="pdesc">Application de visioconférence en temps réel : salles, flux audio/vidéo et synchronisation des participants. Construite avec React et Firebase.</p>
-            <div class="plinks"><a href="#">⟨⟩ Code</a></div>
+            <div class="plinks"><a href="#" data-soon>⟨⟩ Code</a></div>
           </div>
         </div></div></div>
       </div>
@@ -672,7 +731,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
             <p class="pdesc">Application mobile multiplateforme en TypeScript — une base de code, iOS et Android.</p>
-            <div class="plinks"><a href="#">⟨⟩ Code</a></div>
+            <div class="plinks"><a href="#" data-soon>⟨⟩ Code</a></div>
           </div>
         </div></div></div>
       </div>
@@ -684,7 +743,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
             <p class="pdesc">Travail de fin d'études : un site e-commerce complet (catalogue, panier, commandes). En cours.</p>
-            <div class="plinks"><a href="#">↳ En cours</a></div>
+            <div class="plinks"><a href="#" data-soon>↳ En cours</a></div>
           </div>
         </div></div></div>
       </div>
@@ -696,7 +755,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
             <p class="pdesc">Projet d'équipe en gestion de projet agile (Scrum) : pilotage et commande d'une voiture téléguidée.</p>
-            <div class="plinks"><a href="#">↳ Détails</a></div>
+            <div class="plinks"><a href="#" data-soon>↳ Détails</a></div>
           </div>
         </div></div></div>
       </div>
@@ -708,7 +767,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
             <p class="pdesc">Remake du jeu Bomberman en Python avec Pygame : grille, bombes, collisions et IA basique.</p>
-            <div class="plinks"><a href="#">⟨⟩ Code</a></div>
+            <div class="plinks"><a href="#" data-soon>⟨⟩ Code</a></div>
           </div>
         </div></div></div>
       </div>
@@ -720,14 +779,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
             <p class="pdesc">Projet transversal mêlant plusieurs matières du cursus. (Détails à compléter.)</p>
-            <div class="plinks"><a href="#">↳ Détails</a></div>
+            <div class="plinks"><a href="#" data-soon>↳ Détails</a></div>
           </div>
         </div></div></div>
       </div>
     </div>
   </div>
   <div class="wrap" style="padding-block:28px">
-    <p class="mono" style="font-size:.78rem;color:var(--muted)">Home-lab, monitoring &amp; labs cybersécurité — en construction. · <a href="#" style="color:var(--fg)">archive ↗</a></p>
+    <p class="mono" style="font-size:.78rem;color:var(--muted)">Home-lab, monitoring &amp; labs cybersécurité — en construction. · <a href="#" data-soon style="color:var(--fg)">archive ↗</a></p>
   </div>
 </section>
 
@@ -795,13 +854,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div class="shead" data-reveal><span class="no">[06]</span><h2>Hobbies</h2></div>
     <div class="byd" data-reveal>
       <div class="kphoto">
-        <img src="alex-karate.jpg" alt="Alexandre Devroye en karaté Shinkyokushin" width="1100" height="1433">
+        <picture><source srcset="alex-karate.webp" type="image/webp"><img src="alex-karate.jpg" loading="lazy" decoding="async" alt="Alexandre Devroye en karaté Shinkyokushin" width="1100" height="1433"></picture>
         <div class="ov2"></div>
         <span class="kcap">Shinkyokushin · Kumite</span>
       </div>
       <div>
-        <p><b>Karatéka Shinkyokushin</b> (Mitsumine Team La Louvière) et <b>ceinture noire 1<sup>er</sup> dan de Taekwondo, instructeur.</b> Transmettre une technique à un débutant m'a appris autant que l'apprendre.</p>
-        <p>Les arts martiaux ne sont pas un à-côté : c'est là que se forgent la répétition exigeante, le sens du détail et le calme sous pression — exactement ce que je remets dans chaque projet.</p>
+        <p><b>Compétiteur en karaté Shinkyokushin</b> et <b>ceinture noire 1<sup>er</sup> dan de Taekwondo, instructeur.</b> Transmettre une technique à un débutant m'a appris autant que l'apprendre.</p>
         <div class="belt" title="Du 10e kyu à la ceinture noire"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
         <p class="mono" style="font-size:.8rem">Je raconte ce parcours — karaté &amp; code — sur <b style="color:var(--red)">Alex Way</b>.</p>
       </div>
@@ -827,12 +885,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   <div class="wrap">
     <span class="lbl">[07] // Contact</span>
     <h2 style="margin-top:18px">Travaillons<br>ensemble.</h2>
-    <p class="em" id="cv">alexandre.devroye@gmail.com</p>
+    <p class="em" id="cv">alexandre.devroye@std.heh.be</p>
     <div class="soc">
-      <a class="btn red" href="mailto:alexandre.devroye@gmail.com">Écrire ↗</a>
+      <a class="btn red" href="mailto:alexandre.devroye@std.heh.be">Écrire ↗</a>
       <a class="btn" href="https://www.youtube.com/@alexdevway" target="_blank" rel="noopener">YouTube</a>
       <a class="btn" href="https://www.instagram.com/cyberdojo.be/" target="_blank" rel="noopener">CyberDojo</a>
-      <a class="btn" href="#">GitHub</a>
+      <a class="btn" href="https://github.com/XELAEYORVED" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/alexandre-devroye-5b145624b/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
@@ -855,10 +913,18 @@ document.documentElement.classList.add('js');
   var rows=[].slice.call(document.querySelectorAll('[data-proj]'));
   function fill(row,on){row.querySelectorAll('.cseg').forEach(function(s){s.style.width=on?(s.getAttribute('data-w')+'%'):'0';});}
   function setOpen(row){rows.forEach(function(r){var o=r===row;r.classList.toggle('open',o);r.querySelector('.phead').setAttribute('aria-expanded',o?'true':'false');fill(r,o);});}
+  // keep the clicked header still while the row above collapses (no page jump)
+  var pin=0;
+  function hold(head){
+    cancelAnimationFrame(pin);
+    var y0=head.getBoundingClientRect().top, t0=performance.now();
+    (function f(now){var dy=head.getBoundingClientRect().top-y0;if(Math.abs(dy)>.5)window.scrollBy(0,dy);
+      if(now-t0<480)pin=requestAnimationFrame(f);})(t0);
+  }
   rows.forEach(function(r){
     var head=r.querySelector('.phead');
     var no=r.querySelector('.pno'); if(no&&head)head.setAttribute('data-n',no.textContent.trim());
-    head.addEventListener('click',function(){setOpen(r.classList.contains('open')?null:r);});
+    head.addEventListener('click',function(){setOpen(r.classList.contains('open')?null:r);hold(head);});
   });
   requestAnimationFrame(function(){requestAnimationFrame(function(){var o=document.querySelector('.prow.open');if(o)fill(o,true);});});
 
@@ -950,14 +1016,16 @@ document.documentElement.classList.add('js');
     if(!matchMedia('(hover:hover) and (pointer:fine)').matches || matchMedia('(prefers-reduced-motion:reduce)').matches) return;
     var hero=document.getElementById('top'); if(!hero) return;
     var layers=[].slice.call(hero.querySelectorAll('[data-px]'));
-    var tx=0,ty=0,cx=0,cy=0,active=false;
+    var tx=0,ty=0,cx=0,cy=0,raf=0;
+    var depth=layers.map(function(el){el.style.transition='none';return parseFloat(el.getAttribute('data-px'))||0;});
+    function kick(){if(!raf)raf=requestAnimationFrame(loop);}
     hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();
-      tx=(e.clientX-r.left)/r.width-0.5; ty=(e.clientY-r.top)/r.height-0.5; active=true;});
-    hero.addEventListener('pointerleave',function(){tx=0;ty=0;});
-    (function loop(){cx+=(tx-cx)*0.08;cy+=(ty-cy)*0.08;
-      layers.forEach(function(el){var d=parseFloat(el.getAttribute('data-px'))||0;
-        el.style.transform='translate('+(-cx*d)+'px,'+(-cy*d)+'px)';});
-      requestAnimationFrame(loop);})();
+      tx=(e.clientX-r.left)/r.width-0.5; ty=(e.clientY-r.top)/r.height-0.5; kick();},{passive:true});
+    hero.addEventListener('pointerleave',function(){tx=0;ty=0;kick();});
+    // only animates while the mouse moves, then sleeps
+    function loop(){cx+=(tx-cx)*0.08;cy+=(ty-cy)*0.08;
+      layers.forEach(function(el,i){el.style.transform='translate3d('+(-cx*depth[i])+'px,'+(-cy*depth[i])+'px,0)';});
+      raf=(Math.abs(tx-cx)+Math.abs(ty-cy)>.0005)?requestAnimationFrame(loop):0;}
   })();
 
   // portrait tilt
@@ -1007,7 +1075,8 @@ document.documentElement.classList.add('js');
     function ink(){ // particle colour from theme
       return getComputedStyle(document.documentElement).getPropertyValue('--fg').trim()||'#eee';
     }
-    var col=ink();
+    var col=ink(), fade;
+    function bgFade(){fade=hexA(getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()||'#0b0b0c',0.14);}
     function count(){return Math.min(Math.round(W*H/5200),420);}
     function rnd(a,b){return a+Math.random()*(b-a);}
     function spawn(){return {x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,life:rnd(60,220),age:0,sz:rnd(.6,1.9)};}
@@ -1017,7 +1086,7 @@ document.documentElement.classList.add('js');
       cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';
       ctx.setTransform(DPR,0,0,DPR,0,0);
       parts=[];var n=count();for(var i=0;i<n;i++){var p=spawn();p.age=Math.random()*p.life;parts.push(p);}
-      col=ink();
+      col=ink(); bgFade();
       ctx.clearRect(0,0,W,H);
     }
     // flow field angle
@@ -1028,9 +1097,8 @@ document.documentElement.classList.add('js');
       raf=requestAnimationFrame(step); if(!visible) return;
       t+=16;
       // fade trails (paint bg translucent)
-      var bg=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()||'#0b0b0c';
       ctx.globalCompositeOperation='source-over';
-      ctx.fillStyle=hexA(bg,0.14); ctx.fillRect(0,0,W,H);
+      ctx.fillStyle=fade; ctx.fillRect(0,0,W,H);
       ctx.fillStyle=col;
       for(var i=0;i<parts.length;i++){
         var p=parts[i];
@@ -1055,13 +1123,25 @@ document.documentElement.classList.add('js');
     var ro; window.addEventListener('resize',function(){clearTimeout(ro);ro=setTimeout(init,200);});
     if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;}).observe(hero);}
     // react to theme toggle
-    var mo=new MutationObserver(function(){col=ink();});
+    var mo=new MutationObserver(function(){col=ink();bgFade();});
     mo.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
     init();
     if(!rmo){ step(); }
     else { // static: draw one frame of scattered dots
       ctx.fillStyle=col;ctx.globalAlpha=.5;parts.forEach(function(p){ctx.beginPath();ctx.arc(p.x,p.y,p.sz,0,6.283);ctx.fill();});
     }
+  })();
+
+  /* liens pas encore disponibles → toast */
+  (function(){
+    var t=document.createElement('div');t.className='toast';t.setAttribute('role','status');t.setAttribute('aria-live','polite');
+    document.body.appendChild(t);var to;
+    document.addEventListener('click',function(e){
+      var a=e.target.closest('[data-soon]');if(!a)return;
+      e.preventDefault();
+      t.textContent='🚧 Bientôt disponible — encore en préparation';
+      t.classList.add('show');clearTimeout(to);to=setTimeout(function(){t.classList.remove('show');},2400);
+    });
   })();
 })();
 </script>
