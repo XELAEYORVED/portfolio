@@ -296,7 +296,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 .abt .side .row b{color:var(--red);font-weight:700}
 
 /* projects index */
-.proj{border-top:1px solid var(--line)}
+.proj{border-top:1px solid var(--line);container-type:inline-size}
 .prow{border-bottom:1px solid var(--line)}
 .phead{position:relative;display:grid;grid-template-columns:auto 1fr auto auto;gap:clamp(12px,3vw,30px);align-items:center;
   width:100%;text-align:left;background:transparent;border:0;color:inherit;cursor:pointer;
@@ -313,8 +313,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 .phead>*{transition:color .3s}
 .phead:hover>*,.prow.open .phead>*{color:var(--bg)}
 .phead .pno{font-family:var(--ff-mono);font-size:.78rem;color:var(--red)}
-.phead .pname{font-family:var(--ff-disp);font-weight:800;font-size:clamp(1.6rem,6vw,3.4rem);
+.phead .pname{font-family:var(--ff-disp);font-weight:800;font-size:clamp(1.1rem,4.2cqi,2.6rem);min-width:0;hyphens:auto;overflow-wrap:anywhere;
   letter-spacing:-.02em;line-height:1;text-transform:uppercase;color:var(--fg)}
+.phead:hover .pname,.prow.open .phead .pname{color:var(--bg)}
 .phead .pmeta{font-family:var(--ff-mono);font-size:.72rem;color:var(--muted);text-align:right;line-height:1.4}
 .phead:hover .pmeta,.prow.open .phead .pmeta{color:var(--bg)}
 .phead .pplus{font-family:var(--ff-mono);font-size:1.4rem;color:var(--muted);transition:transform .35s,color .3s;width:20px;text-align:center}
@@ -322,7 +323,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 .phead .badge{transition:none}
 .phead:hover .badge.perso,.prow.open .phead .badge.perso{background:var(--bg);color:var(--fg)}
 .phead:hover .badge.acad,.prow.open .phead .badge.acad{border-color:var(--bg);color:var(--bg)}
-@media(max-width:680px){.phead{grid-template-columns:auto 1fr auto auto;gap:10px}.phead .pmeta{display:none}}
+@media(max-width:680px){.phead{grid-template-columns:auto 1fr auto;gap:8px 10px}.phead .pmeta{display:none}
+  .phead .pname{grid-column:2/-1;font-size:clamp(1.1rem,5.6cqi,1.6rem)}
+  .phead .badge{grid-column:2;grid-row:2;justify-self:start}
+  .phead .pplus,.phead .psoon{grid-column:3;grid-row:2}}
 .badge{font-family:var(--ff-mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;white-space:nowrap;align-self:center}
 .badge.perso{background:var(--fg);color:var(--bg)}
 .badge.acad{color:var(--muted);border:1px solid var(--line)}
@@ -331,6 +335,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 .cath{font-family:var(--ff-mono);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
 .catno{font-family:var(--ff-mono);font-size:.7rem;color:var(--red)}
 .pcontent.compact{grid-template-columns:1fr}
+/* standby: names only, details hidden until projects are ready (remove .standby on #projlist to restore) */
+.psoon{display:none;font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap;transition:color .3s}
+.proj.standby .psoon{display:inline}
+.proj.standby .pplus,.proj.standby .pbody{display:none}
+.proj.standby .phead:hover .psoon{color:var(--bg)}
 .pbody{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
 .prow.open .pbody{grid-template-rows:1fr}
 .pbody>.inner{overflow:hidden;min-height:0}
@@ -612,16 +621,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <section class="sec" id="index" style="padding-bottom:0">
   <div class="wrap">
     <div class="shead" data-reveal><span class="no">[03]</span><h2>Index des projets</h2>
-      <span class="mono" style="font-size:.74rem;color:var(--muted)">// survole ou ouvre un projet — composition technique détaillée</span>
+      <span class="mono" style="font-size:.74rem;color:var(--muted)">// descriptions &amp; démos en ligne très bientôt</span>
     </div>
   </div>
   <div class="wrap">
-    <div class="proj" id="projlist" data-reveal>
+    <div class="proj standby" id="projlist" data-reveal>
       <div class="catrow"><span class="catno">A ·</span><h3 class="cath">IA & Full-stack</h3></div>
       <div class="prow open" data-proj>
         <button class="phead" aria-expanded="true">
           <span class="pno">01</span><span class="pname">RecruitMatch</span>
-          <span class="badge perso">Perso</span><span class="pplus">+</span>
+          <span class="badge perso">Perso</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent">
           <div>
@@ -647,7 +656,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">02</span><span class="pname">Fragrance Lab</span>
-          <span class="badge perso">Perso</span><span class="pplus">+</span>
+          <span class="badge perso">Perso</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent">
           <div>
@@ -664,7 +673,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">03</span><span class="pname">ReconKit</span>
-          <span class="badge perso">Perso</span><span class="pplus">+</span>
+          <span class="badge perso">Perso</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent">
           <div>
@@ -681,7 +690,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">04</span><span class="pname">Osu — Kyokushin</span>
-          <span class="badge perso">Perso</span><span class="pplus">+</span>
+          <span class="badge perso">Perso</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent">
           <div>
@@ -698,7 +707,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">05</span><span class="pname">Mitsupass</span>
-          <span class="badge perso">Perso</span><span class="pplus">+</span>
+          <span class="badge perso">Perso</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent">
           <div>
@@ -714,7 +723,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">06</span><span class="pname">VideoConference</span>
-          <span class="badge acad">Académique</span><span class="pplus">+</span>
+          <span class="badge acad">Académique</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
@@ -726,7 +735,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">07</span><span class="pname">App hybride TypeScript</span>
-          <span class="badge acad">Académique</span><span class="pplus">+</span>
+          <span class="badge acad">Académique</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
@@ -738,7 +747,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">08</span><span class="pname">TFE — E-commerce</span>
-          <span class="badge acad">Académique</span><span class="pplus">+</span>
+          <span class="badge acad">Académique</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
@@ -750,7 +759,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">09</span><span class="pname">Scrum — Voiture téléguidée</span>
-          <span class="badge acad">Académique</span><span class="pplus">+</span>
+          <span class="badge acad">Académique</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
@@ -762,7 +771,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">10</span><span class="pname">Bomberman — Pygame</span>
-          <span class="badge acad">Académique</span><span class="pplus">+</span>
+          <span class="badge acad">Académique</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
@@ -774,7 +783,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="prow" data-proj>
         <button class="phead" aria-expanded="false">
           <span class="pno">11</span><span class="pname">Projet interdisciplinaire</span>
-          <span class="badge acad">Académique</span><span class="pplus">+</span>
+          <span class="badge acad">Académique</span><span class="pplus">+</span><span class="psoon">Bientôt</span>
         </button>
         <div class="pbody"><div class="inner"><div class="pcontent compact">
           <div>
@@ -921,6 +930,9 @@ document.documentElement.classList.add('js');
     (function f(now){var dy=head.getBoundingClientRect().top-y0;if(Math.abs(dy)>.5)window.scrollBy(0,dy);
       if(now-t0<480)pin=requestAnimationFrame(f);})(t0);
   }
+  var standby=document.getElementById('projlist').classList.contains('standby');
+  if(standby){rows.forEach(function(r){r.classList.remove('open');var h=r.querySelector('.phead');h.removeAttribute('aria-expanded');h.setAttribute('data-soon','');
+    var no=r.querySelector('.pno');if(no)h.setAttribute('data-n',no.textContent.trim());});rows=[];}
   rows.forEach(function(r){
     var head=r.querySelector('.phead');
     var no=r.querySelector('.pno'); if(no&&head)head.setAttribute('data-n',no.textContent.trim());
